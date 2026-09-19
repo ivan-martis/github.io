@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A modern responsive website">
-  <title>My Website</title>
+
+<meta name="description"
+     content="Professional financial portfolio management services designed to help clients manage, preserve and grow their wealth.">
+
+  <title>MarivanBridge | Financial Portfolio Management</title>
 
   <style>
     * {
@@ -19,91 +22,190 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background: #ffffff;
       line-height: 1.6;
-      color: #222;
-      background: #fff;
     }
 
+    a {
+      text-decoration: none;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
-      background: #111827;
-      color: white;
-      padding: 1rem 5%;
       position: sticky;
       top: 0;
       z-index: 1000;
+      background: #ffffff;
+      border-bottom: 1px solid #e8ebf0;
     }
 
-    nav {
+    .navbar {
       max-width: 1200px;
       margin: auto;
+      padding: 18px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
+      font-size: 24px;
+      font-weight: 700;
+      color: #102a43;
     }
 
-    nav ul {
+    .logo span {
+      color: #b88a44;
+    }
+
+    .nav-links {
       display: flex;
       list-style: none;
-      gap: 1.5rem;
+      gap: 30px;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      transition: opacity 0.2s;
+    .nav-links a {
+      color: #344054;
+      font-size: 15px;
+      font-weight: 500;
+      transition: 0.2s;
     }
 
-    nav a:hover {
-      opacity: 0.7;
+    .nav-links a:hover {
+      color: #b88a44;
     }
+
+    .nav-button {
+      background: #102a43;
+      color: #ffffff !important;
+      padding: 11px 18px;
+      border-radius: 6px;
+    }
+
+    .nav-button:hover {
+      background: #1c405f;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
-      min-height: 80vh;
+      background:
+        linear-gradient(
+          rgba(12, 31, 49, 0.94),
+          rgba(12, 31, 49, 0.94)
+        ),
+        radial-gradient(circle at top right, #456987, #0c1f31);
+
+      color: white;
+      min-height: 680px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 4rem 5%;
-      background: #f3f4f6;
     }
 
-    .hero-content {
-      max-width: 800px;
+    .hero-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 25px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 70px;
+      align-items: center;
     }
 
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      margin-bottom: 1rem;
+    .hero-content h1 {
+      font-size: clamp(42px, 5vw, 68px);
+      line-height: 1.1;
+      margin-bottom: 25px;
+      letter-spacing: -1.5px;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      color: #555;
-      margin-bottom: 2rem;
+    .hero-content h1 span {
+      color: #d2a55f;
     }
 
-    .button {
+    .hero-content p {
+      max-width: 650px;
+      color: #d9e2ec;
+      font-size: 19px;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .primary-button {
       display: inline-block;
-      padding: 0.8rem 1.5rem;
-      background: #2563eb;
+      background: #c49a5a;
       color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.2s;
+      padding: 14px 25px;
+      border-radius: 6px;
+      font-weight: 600;
     }
 
-    .button:hover {
-      background: #1d4ed8;
+    .primary-button:hover {
+      background: #d5ad72;
     }
+
+    .secondary-button {
+      display: inline-block;
+      border: 1px solid #ffffff66;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .secondary-button:hover {
+      background: #ffffff12;
+    }
+
+    .hero-card {
+      background: #ffffff;
+      color: #172033;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-card h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #102a43;
+    }
+
+    .portfolio-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid #e8ebf0;
+    }
+
+    .portfolio-item:last-child {
+      border-bottom: none;
+    }
+
+    .portfolio-item span:last-child {
+      font-weight: 700;
+      color: #1f6f4a;
+    }
+
+    /* =========================
+       GENERAL
+    ========================= */
 
     section {
-      padding: 5rem 5%;
+      padding: 90px 25px;
     }
 
     .container {
@@ -111,60 +213,397 @@
       margin: auto;
     }
 
-    .section-title {
+    .section-heading {
       text-align: center;
-      margin-bottom: 3rem;
-      font-size: 2rem;
+      max-width: 700px;
+      margin: 0 auto 55px;
     }
 
-    .cards {
+    .section-heading .eyebrow {
+      color: #b88a44;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-size: 38px;
+      color: #102a43;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: #667085;
+      font-size: 17px;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services {
+      background: #f8fafc;
+    }
+
+    .service-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      gap: 25px;
     }
 
-    .card {
-      padding: 2rem;
-      background: #f9fafb;
+    .service-card {
+      background: white;
+      padding: 35px;
+      border: 1px solid #e6eaf0;
+      border-radius: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(16, 42, 67, 0.09);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 8px;
+      background: #f3eadc;
+      color: #a77734;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 23px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #102a43;
+    }
+
+    .service-card p {
+      color: #667085;
+    }
+
+    /* =========================
+       APPROACH
+    ========================= */
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .approach-text h2 {
+      font-size: 38px;
+      color: #102a43;
+      margin-bottom: 20px;
+    }
+
+    .approach-text p {
+      color: #667085;
+      margin-bottom: 25px;
+    }
+
+    .check-list {
+      list-style: none;
+    }
+
+    .check-list li {
+      margin-bottom: 15px;
+      color: #344054;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: #b88a44;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+
+    .approach-box {
+      background: #102a43;
+      color: white;
+      padding: 45px;
       border-radius: 12px;
-      border: 1px solid #e5e7eb;
     }
 
-    .card h3 {
-      margin-bottom: 0.75rem;
+    .approach-box h3 {
+      font-size: 25px;
+      margin-bottom: 20px;
     }
+
+    .approach-box p {
+      color: #d9e2ec;
+    }
+
+    /* =========================
+       STATS
+    ========================= */
+
+    .stats {
+      background: #f8fafc;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+      gap: 20px;
+    }
+
+    .stat h3 {
+      font-size: 38px;
+      color: #102a43;
+    }
+
+    .stat p {
+      color: #667085;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about {
-      background: #f3f4f6;
+      background: white;
     }
 
-    .contact {
-      text-align: center;
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
     }
 
-    footer {
-      background: #111827;
+    .about h2 {
+      font-size: 38px;
+      color: #102a43;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #667085;
+      margin-bottom: 18px;
+    }
+
+    .about-panel {
+      background: #f3f6f8;
+      padding: 40px;
+      border-radius: 12px;
+    }
+
+    .about-panel h3 {
+      color: #102a43;
+      margin-bottom: 15px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      background: #102a43;
       color: white;
       text-align: center;
-      padding: 2rem;
     }
 
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 1rem;
-      }
+    .cta h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
 
-      nav ul {
-        gap: 1rem;
-      }
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #d9e2ec;
+    }
 
-      .cards {
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .contact-info h2 {
+      font-size: 38px;
+      color: #102a43;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      color: #667085;
+      margin-bottom: 25px;
+    }
+
+    .contact-detail {
+      margin-bottom: 18px;
+    }
+
+    .contact-detail strong {
+      display: block;
+      color: #102a43;
+      margin-bottom: 3px;
+    }
+
+    .contact-detail span {
+      color: #667085;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d9dee7;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #b88a44;
+    }
+
+    form button {
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #0b1c2c;
+      color: #c8d1dc;
+      padding: 40px 25px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-logo {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .footer-logo span {
+      color: #c49a5a;
+    }
+
+    .footer-text {
+      max-width: 450px;
+      font-size: 14px;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 30px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #ffffff18;
+      font-size: 13px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+      .hero-container,
+      .approach-grid,
+      .about-grid,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      section {
-        padding: 3rem 5%;
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-card {
+        max-width: 600px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-button {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-container {
+        padding: 70px 25px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2,
+      .approach-text h2,
+      .about h2,
+      .contact-info h2 {
+        font-size: 30px;
+      }
+
+      .cta h2 {
+        font-size: 30px;
+      }
+
+      .footer-container {
+        flex-direction: column;
       }
     }
   </style>
@@ -173,17 +612,26 @@
 
 <body>
 
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
   <header>
-    <nav>
-      <div class="logo">My Website</div>
+    <nav class="navbar">
 
 ```
-  <ul>
+  <div class="logo">
+    Marivan<span>s.r.o</span>
+  </div>
+
+  <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#approach">Approach</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-button">Contact</a></li>
   </ul>
+
 </nav>
 ```
 
@@ -192,78 +640,510 @@
   <main>
 
 ```
+<!-- =========================
+     HERO
+========================== -->
+
 <section id="home" class="hero">
-  <div class="hero-content">
-    <h1>Welcome to Marivan s.r.o</h1>
-    <p>
-      A clean, modern and responsive website built with HTML and CSS.
-    </p>
-    <a href="#services" class="button">Get Started</a>
-  </div>
-</section>
 
-<section id="services">
-  <div class="container">
-    <h2 class="section-title">Our Services</h2>
+  <div class="hero-container">
 
-    <div class="cards">
-      <div class="card">
-        <h3>Financial Consulting</h3>
-        <p>
-          Portfolio Management Services.
-        </p>
+    <div class="hero-content">
+
+      <h1>
+        Your Wealth.<br>
+        <span>Managed With Purpose.</span>
+      </h1>
+
+      <p>
+        Professional portfolio management designed around your
+        financial objectives, risk profile and long-term goals.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="primary-button">
+          Schedule a Consultation
+        </a>
+
+        <a href="#services" class="secondary-button">
+          Explore Our Services
+        </a>
       </div>
 
-      <div class="card">
-        <h3>Development</h3>
-        <p>
-          Fast, reliable and modern websites built with clean code.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Support</h3>
-        <p>
-          Ongoing support and improvements to keep your website running.
-        </p>
-      </div>
     </div>
+
+
+    <div class="hero-card">
+
+      <h3>Portfolio Strategy</h3>
+
+      <div class="portfolio-item">
+        <span>Asset Allocation</span>
+        <span>✓</span>
+      </div>
+
+      <div class="portfolio-item">
+        <span>Risk Management</span>
+        <span>✓</span>
+      </div>
+
+      <div class="portfolio-item">
+        <span>Portfolio Monitoring</span>
+        <span>✓</span>
+      </div>
+
+      <div class="portfolio-item">
+        <span>Regular Reviews</span>
+        <span>✓</span>
+      </div>
+
+    </div>
+
   </div>
+
 </section>
+
+
+<!-- =========================
+     SERVICES
+========================== -->
+
+<section id="services" class="services">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        Our Services
+      </div>
+
+      <h2>
+        Comprehensive Portfolio Management
+      </h2>
+
+      <p>
+        A structured approach to managing investments and
+        building portfolios around individual financial objectives.
+      </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+      <div class="service-card">
+
+        <div class="service-icon">◆</div>
+
+        <h3>Portfolio Management</h3>
+
+        <p>
+          Ongoing management of investment portfolios based on
+          your objectives, time horizon and risk considerations.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">↗</div>
+
+        <h3>Asset Allocation</h3>
+
+        <p>
+          Strategic allocation across different asset classes
+          designed to support diversification and portfolio objectives.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">◎</div>
+
+        <h3>Risk Management</h3>
+
+        <p>
+          Portfolio monitoring and risk assessment to help keep
+          investment decisions aligned with your financial plan.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">▣</div>
+
+        <h3>Wealth Planning</h3>
+
+        <p>
+          Coordinated financial planning focused on long-term
+          wealth management and financial objectives.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">◈</div>
+
+        <h3>Portfolio Review</h3>
+
+        <p>
+          Regular portfolio reviews to assess allocation,
+          performance and alignment with your objectives.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">⌁</div>
+
+        <h3>Personalized Strategy</h3>
+
+        <p>
+          Investment strategies tailored to your circumstances,
+          preferences, financial goals and risk tolerance.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     APPROACH
+========================== -->
+
+<section id="approach">
+
+  <div class="container">
+
+    <div class="approach-grid">
+
+      <div class="approach-text">
+
+        <h2>
+          A disciplined approach to managing your portfolio.
+        </h2>
+
+        <p>
+          We believe portfolio management should be structured,
+          transparent and aligned with each client's individual
+          circumstances.
+        </p>
+
+        <ul class="check-list">
+
+          <li>Understand your financial objectives</li>
+
+          <li>Assess your investment profile</li>
+
+          <li>Build a diversified portfolio strategy</li>
+
+          <li>Monitor portfolio risk and allocation</li>
+
+          <li>Review and adjust as circumstances change</li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="approach-box">
+
+        <h3>
+          Long-Term Perspective
+        </h3>
+
+        <p>
+          Our process focuses on disciplined portfolio management
+          rather than short-term market timing. We work with clients
+          to establish an investment strategy and review it as their
+          financial circumstances and objectives evolve.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================== -->
+
+<section class="stats">
+
+  <div class="container">
+
+    <div class="stats-grid">
+
+      <div class="stat">
+        <h3>01</h3>
+        <p>Personalized Strategy</p>
+      </div>
+
+      <div class="stat">
+        <h3>02</h3>
+        <p>Structured Process</p>
+      </div>
+
+      <div class="stat">
+        <h3>03</h3>
+        <p>Ongoing Monitoring</p>
+      </div>
+
+      <div class="stat">
+        <h3>04</h3>
+        <p>Long-Term Focus</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================== -->
 
 <section id="about" class="about">
-  <div class="container">
-    <h2 class="section-title">About Us</h2>
 
-    <p style="text-align: center; max-width: 700px; margin: auto;">
-      We create simple, effective and modern digital experiences.
-      Replace this text with information about your business, project,
-      organization or personal website.
-    </p>
+  <div class="container">
+
+    <div class="about-grid">
+
+      <div>
+
+        <h2>
+          Built around your financial objectives.
+        </h2>
+
+        <p>
+          Marivan provides portfolio management services
+          for individuals, families and businesses seeking a
+          structured approach to managing their investments.
+        </p>
+
+        <p>
+          We take the time to understand your financial situation,
+          investment objectives and risk considerations before
+          developing a portfolio strategy.
+        </p>
+
+      </div>
+
+
+      <div class="about-panel">
+
+        <h3>
+          Our Philosophy
+        </h3>
+
+        <p>
+          We focus on disciplined investment processes,
+          diversification, risk awareness and ongoing portfolio
+          review.
+        </p>
+
+      </div>
+
+    </div>
+
   </div>
+
 </section>
 
-<section id="contact" class="contact">
+
+<!-- =========================
+     CALL TO ACTION
+========================== -->
+
+<section class="cta">
+
   <div class="container">
-    <h2 class="section-title">Contact</h2>
 
-    <p>Have a question? Get in touch with us.</p>
+    <h2>
+      Start a conversation about your portfolio.
+    </h2>
 
-    <br>
+    <p>
+      Tell us about your financial objectives and discover how
+      a structured portfolio management approach could fit your needs.
+    </p>
 
-    <a href="mailto:hello@example.com" class="button">
-      Email Us
+    <a href="#contact" class="primary-button">
+      Request a Consultation
     </a>
+
   </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================== -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+
+        <h2>
+          Let's discuss your financial goals.
+        </h2>
+
+        <p>
+          Contact our team to arrange an introductory conversation
+          about your portfolio management requirements.
+        </p>
+
+
+        <div class="contact-detail">
+
+          <strong>Email</strong>
+
+          <span>
+            hello@marivan.cz
+          </span>
+
+        </div>
+
+
+        <div class="contact-detail">
+
+          <strong>Phone</strong>
+
+          <span>
+            +420 (000) 000-0000
+          </span>
+
+        </div>
+
+
+        <div class="contact-detail">
+
+          <strong>Office</strong>
+
+          <span>
+            100 Financial Avenue<br>
+            New York, NY 10001
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <form>
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Full Name"
+          required
+        >
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          required
+        >
+
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone Number"
+        >
+
+        <textarea
+          name="message"
+          placeholder="Tell us briefly about your requirements..."
+          required
+        ></textarea>
+
+        <button
+          type="submit"
+          class="primary-button"
+        >
+          Send Inquiry
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
 </section>
 ```
 
   </main>
 
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
-    <p>&copy; 2026 My Website. All rights reserved.</p>
+
+```
+<div class="footer-container">
+
+  <div>
+
+    <div class="footer-logo">
+      Marivan<span>Bridge</span>
+    </div>
+
+    <p class="footer-text">
+      Professional financial portfolio management services
+      focused on structured investment strategies and
+      long-term financial objectives.
+    </p>
+
+  </div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+  © 2026 MarivanBridge. All rights reserved.
+
+  <br><br>
+
+  <small>
+    Investment involves risk. Past performance is not indicative
+    of future results. This website is for informational purposes
+    only and does not constitute investment, legal or tax advice.
+  </small>
+
+</div>
+```
+
   </footer>
 
 </body>
 </html>
-
